@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Karla:wght@400;700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {/*### Primary*/
+--Light-red-bg: hsla(0, 100%, 67%, 0.204);
+--Light-red: hsl(0, 100%, 67%);
+--Orangey-yellow-bg: hsla(39, 100%, 56%, 0.202);
+--Orangey-yellow: hsl(39, 100%, 56%);
+--Green-steal-bg: hsla(166, 100%, 37%, 0.2);
+--Green-steal: hsl(166, 100%, 37%);
+--Cobalt-blue-bg: hsla(234, 85%, 45%, 0.201);
+--Cobalt-blue: hsl(234, 85%, 45%);
+--Cobalt-blue-button: hsla(234, 73%, 16%, 0.882);
+--Cobalt-blue-round: hsla(234, 85%, 45%, 0.405);
+--Cobalt-blue-round-bottom: hsla(234, 85%, 45%, 0.207);
+/*## Gradients*/
+--Light-slate-blue: hsl(252, 100%, 67%); /*background*/
+--Light-royal-blue: hsl(241, 81%, 54%); /*background*/
+--Pale-grey: rgb(236, 233, 233); /* body background*/
+
+--Violet-blue : hsla(256, 72%, 46%, 1); /*circle*/
+--Persian-blue : hsla(241, 72%, 46%, 0); /*circle*/
+/*### Neutral*/
+--White: hsl(0, 0%, 100%);
+--Pale-blue: hsl(221, 100%, 96%);
+--Light-lavender: hsl(241, 100%, 89%);
+--Light-lavender-dark: hsl(240, 2%, 47%);
+--Dark-gray-blue: hsl(223, 8%, 36%);
+}
+
+body { 
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;
+    background-color: var(--Pale-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--White);
+    width: 380px;
+    height: 750px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    border-radius: 30px; 
+}
+
+.result {
+    background-image: radial-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    padding: 0 2rem;
+    border-radius: 30px;
+}
+
+
+.result h3 {
+    color:var(--Light-lavender);
+    padding: 1.4rem 0.8rem 0.2rem 0.8rem;
+}
+
+.result h2 {
+    color:var(--White);
+    padding: 1.4rem 0.8rem 0.2rem 0.8rem;
+}
+
+.result p {
+    color: var(--Light-lavender);
+    padding: 0rem 0.8rem 1.6rem 0.8rem;
+}
+
+.round span {
+    font-size:3.3rem;
+    font-weight: bold;
+    color: var(--White);
+}
+
+.round {
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    background: linear-gradient(var(--Cobalt-blue-round) ,var(--Cobalt-blue-round-bottom));
+    margin : 0 auto;
+    padding: 1.5rem 0 0 0;
+    margin-top: 1.4rem
+}
+
+.summary h3 {
+    padding: 0.5rem 0.2rem 0.1rem 2rem;
+    text-align: left;
+}
+ul {
+    list-style-type: none;
+}
+
+ul span {
+    color: var(--Light-lavender-dark);
+}
+
+.reaction {
+    background-color: var(--Light-red-bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.8rem;
+    margin: 0.8rem 2rem;
+    border-radius: 0.4rem;
+}
+
+.reaction li:first-child {
+    color: var(--Light-red);
+}
+
+.memory {
+    background-color: var(--Orangey-yellow-bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.8rem;
+    margin: 0.8rem 2rem;
+    border-radius: 0.4rem;
+}
+
+.memory li:first-child {
+    color: var(--Orangey-yellow);
+}
+
+.verbal {
+    background-color: var(--Green-steal-bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.8rem;
+    margin: 0.8rem 2rem;
+    border-radius: 0.4rem;
+}
+
+.verbal li:first-child {
+    color: var(--Green-steal);
+}
+
+.visual {
+    background-color: var(--Cobalt-blue-bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.8rem;
+    margin: 0.8rem 2rem;
+    border-radius: 0.4rem;
+}
+
+.visual li:first-child {
+    color: var(--Cobalt-blue);
+}
+
+button {
+    padding: 1rem 8rem;
+    border-radius: 4rem;
+    border: none;
+    text-wrap: nowrap;
+    font-size: 16px;
+    font-weight:600;
+    background-color: var(--Cobalt-blue-button);
+    color: var(--White);
+    margin-top:0.8rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(var(--Violet-blue), var(--Cobalt-blue-button));
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+    @media(min-width:768px) {
+        .card {
+            width: 650px;
+            height:  450px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top:150px;
+        }
+
+        .summary {
+            padding-top: 1.6rem;
+        }
+
+        .result,.summary {
+            min-height: 450px;
+        }
+
+        button {
+            padding: 0.8rem 6rem; 
+        }   
+    }
